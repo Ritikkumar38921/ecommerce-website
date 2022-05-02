@@ -25,10 +25,6 @@
     "nodemon": "^2.0.16",
     "uuid": "^8.3.2",
     "uuidv4": "^6.2.13"
-  },
-  "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-core": "^6.26.3",
-    "babel-loader": "^8.2.5"
   }
+ 
 }
