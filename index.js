@@ -41,11 +41,10 @@ app.use("/api/checkout",stripeRoute);
 
 if(process.env.NODE_ENV == "production"){
     app.use(express.static(path.join(__dirname,"/public/images")));
-    app.use(express.static('client/build'));
-    app.use("*",(req,res) => {
-        res.sendFile(path.resolve(__dirname,"client","build","index.html"))
-    });
     
+    app.get('/',(req,res) => {
+        res.status(200).json("welcome to nodeJs");
+    })
 }
 
 app.listen(process.env.PORT || 3003,()=>{
