@@ -42,7 +42,7 @@ app.use("/api/checkout",stripeRoute);
 if(process.env.NODE_ENV == "production"){
     app.use(express.static(path.join(__dirname,"/public/images")));
     
-    app.get('/',(req,res) => {
+    app.get('*',(req,res) => {
         res.status(200).json("welcome to nodeJs");
     })
 }
