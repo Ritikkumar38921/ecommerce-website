@@ -11,7 +11,7 @@ const productRoute = require("./routes/product");
 const productroute = require("./routes/product");
 
 
-// const stripeRoute = require("./routes/stripe");
+const stripeRoute = require("./routes/stripe");
 const { urlencoded } = require('express');
 const cors = require("cors");
 const app = express();
@@ -37,7 +37,7 @@ app.use("/api/products",productRoute);
 app.use("/product/api/products",productroute);
 app.use("/api/carts",cartRoute);
 app.use("/api/orders",orderRoute);
-// app.use("/api/checkout",stripeRoute);
+app.use("/api/checkout",stripeRoute);
 
 if(process.env.NODE_ENV == "production"){
     app.use(express.static(path.join(__dirname,"/public/images")));
