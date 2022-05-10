@@ -70,4 +70,4 @@ router.post("/payment",(req,res) => {
 
 // primary key for frontend side for stripe
 // pk_test_51Ks0Z7SCeb6qOjoeEkFbzgcwF9R8af2k7rL6LbfT0R6rHJaI5cjn43jekssjc25RmLNosl2WOMqfRARPRdaSSjRi00xwO6iTKY
-// module.exports = router;
+module.exports = router;
